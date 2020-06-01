@@ -17,9 +17,8 @@ EOF
 
 # Create password less sudo edit
 sudo touch /etc/sudoers.d/$USER
-cat > /etc/sudoers.d/$USER << EOF
-$USER ALL=(ALL)	NOPASSWD: ALL
-EOF
+
+echo "$USER ALL=(ALL)	NOPASSWD: ALL" > /etc/sudoers.d/$USER
 
 
 
